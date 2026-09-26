@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honey Online Market🍯</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Header / Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">🍯 Sahyadri Honey</div>
+
+    <nav class="nav-links">
+      <button id="btn-orders" class="nav-btn">Previous Orders</button>
+      <button id="btn-track" class="nav-btn">Track Orders</button>
+      <button id="btn-cart" class="nav-btn cart-btn">
+        🛒 Cart <span id="cart-count" class="cart-count">0</span>
+      </button>
+      <button id="btn-login" class="nav-btn login-btn">Login</button>
+      <button id="btn-logout" class="nav-btn logout-btn hidden">Logout</button>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+<section class="hero-slider">
+  <div class="slide active" style="background-image: url('https://images.bhaskarassets.com/web2images/5483/2023/10/26/817b9a7a-677a-4b60-9e82-73867198589c_1698297982149.jpg');">
+    <div class="slide-overlay">
+      <h1>Pure, Raw Honey from Patgaon</h1>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa-gKj60lsTFmph1ChZGRW2g5jdF5oJ9-ylxBgDyq1Vua2y2R0huhTnSnU&s=10');">
+    <div class="slide-overlay">
+      <h1>India's Honey Village</h1>
+      <p>Patgaon produces 10 tonnes of pure honey every year.</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('https://content.jdmagicbox.com/v2/comp/kolhapur/s6/0231px231.x231.180304071529.n4s6/catalogue/shri-mouni-maharaj-samadhi-temple-patgaon-kolhapur-temples-pFrzlC7Y8p.jpg');">
+    <div class="slide-overlay">
+      <h1>A Royal Connection</h1>
+      <p>Where Chhatrapati Shivaji Maharaj once sought blessings.</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1555211652-5c6222f971bc?w=1600');">
+    <div class="slide-overlay">
+      <h1>The Beekeepers' Legacy</h1>
+      <p>Empowering local women and farmers of the Sahyadri mountains.</p>
+    </div>
+  </div>
+
+  <button class="slider-arrow prev" id="slide-prev">❮</button>
+  <button class="slider-arrow next" id="slide-next">❯</button>
+
+  <div class="slider-dots" id="slider-dots"></div>
+</section>
+
+  <!-- ===== Product Grid ===== -->
+  <main class="container">
+    <h2 class="section-title">Our Honey Collection</h2>
+    <div id="product-grid" class="product-grid">
+      <!-- Products injected by JS -->
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h4>🍯 Sahyadri Honey</h4>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Kazi Honey Production Company Ltd.</p>
+      <p>Patgaon, Kolhapur, Maharashtra</p>
+      <p>support@kazihoney.com · +91 98765 43210</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <p>FSSAI: 12345678901234</p>
+      <p>GSTIN: 27ABCDE1234F1Z5</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="orders.html">Orders</a></p>
+      <p><a href="track.html">Track</a></p>
+      <p><a href="login.html">Login</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Kazi Honey Production Company Ltd.</p>
+  </div>
+</footer>
+
+  <!-- ===== Toast for notifications ===== -->
+  <div id="toast" class="toast hidden"></div>
+
+<script src="js/common.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

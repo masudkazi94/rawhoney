@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Previous Orders — Sahyadri Honey</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">🍯 Sahyadri Honey</div>
+    <nav class="nav-links">
+      <button id="btn-orders" class="nav-btn">Previous Orders</button>
+      <button id="btn-track" class="nav-btn">Track Orders</button>
+      <button id="btn-cart" class="nav-btn cart-btn">🛒 Cart <span id="cart-count" class="cart-count">0</span></button>
+      <button id="btn-login" class="nav-btn login-btn">Login</button>
+      <button id="btn-logout" class="nav-btn logout-btn hidden">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Previous Orders</h2>
+    <div id="orders-list" class="orders-list"></div>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/common.js"></script>
+  <script>
+    const ORDERS = [
+      { id: "ORD-1001", date: "2026-08-12", status: "Delivered", total: 770, items: "Wild Forest Honey × 1, Raw Acacia × 1" },
+      { id: "ORD-1002", date: "2026-09-03", status: "In Transit", total: 780, items: "Organic Mustard Honey × 1" },
+      { id: "ORD-1003", date: "2026-09-20", status: "Placed", total: 400, items: "Multiflora Honey × 1" },
+    ];
+
+    const list = document.getElementById("orders-list");
+
+    if (!isLoggedIn()) {
+      list.innerHTML = `<p class="empty-msg">Please <a href="login.html">login</a> to see your orders.</p>`;
+    } else {
+      ORDERS.forEach((o) => {
+        const card = document.createElement("div");
+        card.className = "order-card";
+        card.innerHTML = `
+          <div class="order-head">
+            <strong>${o.id}</strong>
+            <span class="order-status status-${o.status.replace(" ", "").toLowerCase()}">${o.status}</span>
+          </div>
+          <p class="order-date">${o.date}</p>
+          <p class="order-items">${o.items}</p>
+          <p class="order-total">Total: ₹${o.total}</p>
+        `;
+        list.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

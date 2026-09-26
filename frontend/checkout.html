@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Sahyadri Honey</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">🍯 Sahyadri Honey</div>
+    <nav class="nav-links">
+      <button id="btn-orders" class="nav-btn">Previous Orders</button>
+      <button id="btn-track" class="nav-btn">Track Orders</button>
+      <button id="btn-cart" class="nav-btn cart-btn">🛒 Cart <span id="cart-count" class="cart-count">0</span></button>
+      <button id="btn-login" class="nav-btn login-btn">Login</button>
+      <button id="btn-logout" class="nav-btn logout-btn hidden">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Checkout</h2>
+
+    <div class="checkout-wrapper">
+      <section class="checkout-items">
+        <h3>Order Summary</h3>
+        <div id="checkout-items"></div>
+        <p class="checkout-total">Total: ₹<span id="checkout-total">0</span></p>
+      </section>
+
+      <section class="checkout-payment">
+        <h3>Payment Method</h3>
+        <form id="payment-form">
+          <label class="pay-option">
+            <input type="radio" name="pay" value="cod" checked />
+            <span>Cash on Delivery</span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pay" value="upi" />
+            <span>UPI</span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pay" value="card" />
+            <span>Credit / Debit Card</span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pay" value="netbanking" />
+            <span>Net Banking</span>
+          </label>
+
+          <button type="submit" class="checkout-btn">Place Order</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

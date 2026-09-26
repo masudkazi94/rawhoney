@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — Sahyadri Honey</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">🍯 Sahyadri Honey</div>
+    <nav class="nav-links">
+      <button id="btn-orders" class="nav-btn">Previous Orders</button>
+      <button id="btn-track" class="nav-btn">Track Orders</button>
+      <button id="btn-cart" class="nav-btn cart-btn">🛒 Cart <span id="cart-count" class="cart-count">0</span></button>
+      <button id="btn-login" class="nav-btn login-btn">Login</button>
+      <button id="btn-logout" class="nav-btn logout-btn hidden">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Your Cart</h2>
+    <div id="cart-list" class="cart-list"></div>
+
+    <div class="cart-summary">
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

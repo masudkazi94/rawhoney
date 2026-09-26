@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Sahyadri Honey</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">🍯 Sahyadri Honey</div>
+    <nav class="nav-links">
+      <button id="btn-orders" class="nav-btn">Previous Orders</button>
+      <button id="btn-track" class="nav-btn">Track Orders</button>
+      <button id="btn-cart" class="nav-btn cart-btn">🛒 Cart <span id="cart-count" class="cart-count">0</span></button>
+      <button id="btn-login" class="nav-btn login-btn">Login</button>
+      <button id="btn-logout" class="nav-btn logout-btn hidden">Logout</button>
+    </nav>
+  </header>
+
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <h2 id="auth-title">Login</h2>
+
+      <form id="auth-form">
+        <label>Email</label>
+        <input type="email" id="email" required />
+
+        <label>Password</label>
+        <input type="password" id="password" required />
+
+        <button type="submit" class="auth-submit">Login</button>
+      </form>
+
+      <p class="auth-switch">
+        <span id="switch-text">Don't have an account?</span>
+        <a href="#" id="switch-link">Register</a>
+      </p>
+    </div>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
