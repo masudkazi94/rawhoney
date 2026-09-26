@@ -5,7 +5,7 @@
 // ---------- Dummy products (will come from FastAPI later) ----------
 const PRODUCTS = [
   { id: 1, name: "Wild Forest Honey", weight: "500g", price: 550,
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400" },
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5aYyRKGyyJpHB_0OBxpSLwwTUZWH7hM6BfK_CZZd2ovHjE-szCylKR1BT&s=10" },
   { id: 2, name: "Jamun Raw Honey", weight: "250g", price: 320,
     image: "https://media.istockphoto.com/id/178427749/photo/jambul-or-jamun.jpg?s=1024x1024&w=is&k=20&c=p2I31Jmi4EqPqqYnRYGIJgNhEGYJrIMTmnYoMos7J3o=" },
   { id: 3, name: "Organic Mustard Honey", weight: "1kg", price: 1100,
